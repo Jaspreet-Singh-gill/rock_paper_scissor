@@ -12,3 +12,11 @@ function getComputerChoice(){
     };
 
 }
+
+//Function that takes Input from user and return it
+
+function getHumanChoice(){
+    let input = prompt("Enter ROCK,PAPER OR SCISSOR : ");
+    return input.toUpperCase();
+}
+
