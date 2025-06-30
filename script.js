@@ -55,5 +55,15 @@ function playGame(){
     playRound();
     playRound();
     playRound();
+    console.log("Result:");
+    if(humanScore > computerScore){
+        console.log("You win the game");
+    }
+    else if(humanScore < computerScore){
+        console.log("You lose the game");
+    }
+    else{
+        console.log("Their is a tie now");
+    }
 
 }
