@@ -20,3 +20,28 @@ function getHumanChoice(){
     return input.toUpperCase();
 }
 
+
+let humanScore =0;
+let computerScore =0;
+
+
+function playRound(){
+    
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+    if(humanChoice === computerChoice){
+        console.log("Tie, No one wins");
+    }
+    else if((humanChoice == "PAPER" && computerChoice == "ROCK")
+            ||(humanChoice == "ROCK" && computerChoice == "SCISSOR")
+            ||(humanChoice == "SCISSOR" && computerChoice == "PAPER")){
+        humanScore++;
+        console.log(`You win, ${computerChoice} beats ${humanChoice}.`);
+    }
+    else{
+        computerScore++;
+        console.log(`You lose, ${computerChoice} beats ${humanChoice}.`);
+    }
+
+    console.log(` human score : ${humanScore}\n Computer score : ${computerScore}.`);
+}
