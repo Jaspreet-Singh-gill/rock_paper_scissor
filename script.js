@@ -21,6 +21,8 @@ function getHumanChoice(){
 }
 
 
+
+
 let humanScore =0;
 let computerScore =0;
 
@@ -44,4 +46,14 @@ function playRound(){
     }
 
     console.log(` human score : ${humanScore}\n Computer score : ${computerScore}.`);
+}
+
+
+function playGame(){
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+
 }
