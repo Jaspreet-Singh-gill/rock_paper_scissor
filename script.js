@@ -79,6 +79,33 @@ const comImage = document.querySelector(".compImage");
 const start =document.querySelector(".start");
 
 
+const leftContainerButtons = document.createElement("div");
+leftContainerButtons.classList.add("buttonLeft");
+const rightContainerButtons = document.createElement("div");
+rightContainerButtons.classList.add("buttonRight");
+
+const Cbutton1 = document.createElement("button");
+Cbutton1.textContent = "stone";
+const Cbutton2 = document.createElement("button");
+Cbutton2.textContent = "paper";
+const Cbutton3 = document.createElement("button");
+Cbutton3.textContent = "scissor";
+
+const Hbutton1 = document.createElement("button");
+Hbutton1.textContent = "stone";
+const Hbutton2 = document.createElement("button");
+Hbutton2.textContent = "paper";
+const Hbutton3 = document.createElement("button");
+Hbutton3.textContent = "scissor";
+
+
+rightContainerButtons.appendChild(Hbutton1);
+rightContainerButtons.appendChild(Hbutton2);
+rightContainerButtons.appendChild(Hbutton3);
+
+leftContainerButtons.appendChild(Cbutton1);
+leftContainerButtons.appendChild(Cbutton2);
+leftContainerButtons.appendChild(Cbutton3);
 
 
 
@@ -89,5 +116,8 @@ startButton.addEventListener("click",function(e){
     middleLeft.removeChild(comImage);
     middleRight.removeChild(humanImage);
     footer.removeChild(start);
+    middleLeft.appendChild(leftContainerButtons);
+    middleRight.appendChild(rightContainerButtons);
+
 
 });
