@@ -70,13 +70,24 @@
 
 // playGame();
 
+const middleLeft = document.querySelector(".middleLeft");
+const middleRight = document.querySelector(".middleRight");
+const footer = document.querySelector(".footer");
+
+const humanImage = document.querySelector(".humImage");
+const comImage = document.querySelector(".compImage");
+const start =document.querySelector(".start");
+
+
 
 
 
 
 const startButton = document.querySelector("#startButton");
 
-startButton.addEventListener("mousemove",function(e){
-    startButton.style.cssText ="background-color:rgb(14, 155, 108);";
+startButton.addEventListener("click",function(e){
+    middleLeft.removeChild(comImage);
+    middleRight.removeChild(humanImage);
+    footer.removeChild(start);
 
 });
