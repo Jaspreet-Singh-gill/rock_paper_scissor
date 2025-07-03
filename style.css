@@ -64,14 +64,17 @@ img{
 
 .footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
+    align-items: center;
     margin-bottom: 30px;
 
 }
 
 .footer button{
     font-size: 34px;
+    display: block;
     background-color: aquamarine;
     font-weight: bold;
     border:3px solid aquamarine;
