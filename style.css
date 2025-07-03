@@ -14,6 +14,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px 0px;
 }
 
 .heading div{
@@ -37,7 +38,7 @@ img{
 
 .comp,
 .human{
-    font-size: 24px;
+    font-size: 28px;
     color:rgb(255, 35, 35);
     font-weight: bold;
     font-family: "Lucida Handwriting",serif;
@@ -61,6 +62,23 @@ img{
 
 }
 
+.middleRight div,
+.middleLeft div{
+    font-size: 18px;
+    color:rgb(94, 0, 177);
+    font-weight: bold;
+    font-family: "Lucida Handwriting",serif;
+
+}
+
+.middleLeft .comp,
+.middleRight .human{
+    font-size: 28px;
+    color:rgb(255, 35, 35);
+    font-weight: bold;
+    font-family: "Lucida Handwriting",serif;
+
+}
 
 .footer{
     display: flex;
@@ -82,6 +100,13 @@ img{
     padding: 5px 15px;
 }
 
+.footer div{
+    font-size: 24px;
+    color:rgb(255, 35, 35);
+    font-weight: bold;
+    font-family: "Lucida Handwriting",serif;
+
+}
 
 
 .buttonRight,
@@ -107,4 +132,9 @@ img{
     display: block;
     width: 110px;
     height: 60px;
+}
+
+
+.redColor{
+    background-color: red;
 }

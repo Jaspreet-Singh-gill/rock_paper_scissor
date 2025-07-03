@@ -4,10 +4,13 @@ function getComputerChoice(){
     let val = Math.floor(Math.random()*3);
     switch(val){
         case 0:
+            Cbutton1.classList.add("redColor");
             return "STONE"; // No break statement required as function will return as val's value matches
         case 1:
+            Cbutton2.classList.add("redColor");
             return "PAPER";
         case 2:
+            Cbutton3.classList.add("redColor");
             return "SCISSOR";
     };
 
@@ -40,6 +43,16 @@ function enable(){
 
 }
 
+
+function removeRed(){
+    Hbutton1.classList.remove("redColor");
+        Hbutton2.classList.remove("redColor");
+        Hbutton3.classList.remove("redColor");
+        Cbutton1.classList.remove("redColor");
+        Cbutton2.classList.remove("redColor");
+        Cbutton3.classList.remove("redColor");
+
+}
 
 let humanScore =0;
 let computerScore =0;
@@ -168,6 +181,7 @@ Hbutton1.addEventListener("click",function(){
     let humanChoice = Hbutton1.textContent;
     humanChoice =humanChoice.toUpperCase();
     let computerChoice = getComputerChoice();
+    Hbutton1.classList.add("redColor");
     playRound(humanChoice,computerChoice);
 
 
@@ -177,6 +191,7 @@ Hbutton2.addEventListener("click",function(){
     let humanChoice = Hbutton2.textContent;
     humanChoice =humanChoice.toUpperCase();
     let computerChoice = getComputerChoice();
+    Hbutton2.classList.add("redColor");
     playRound(humanChoice,computerChoice);
 
 
@@ -187,6 +202,7 @@ Hbutton3.addEventListener("click",function(){
     let humanChoice = Hbutton3.textContent;
     humanChoice =humanChoice.toUpperCase();
     let computerChoice = getComputerChoice();
+    Hbutton3.classList.add("redColor");
     playRound(humanChoice,computerChoice);
 
 
@@ -197,6 +213,8 @@ Hbutton3.addEventListener("click",function(){
 buttonNext.addEventListener("click",function(){
     enable();
     footer.removeChild(buttonNext);
+    footMessage.textContent ="";
+    removeRed();
 });
 
 
